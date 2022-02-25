@@ -6,7 +6,7 @@ const Home = ({ account, balance, connectWallet }) => {
 
   useEffect(() => {
     if (balance) {
-      balance == 0 ? navigate('/profile') : navigate(`/buy-token/${account}`);
+      balance > 0 ? navigate('/profile') : navigate(`/buy-token/${account}`);
     }
   });
 
