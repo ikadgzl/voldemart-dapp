@@ -6,12 +6,7 @@ const Profile = ({ account, web3 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    web3.eth
-      .sign(
-        web3.utils.keccak256(username),
-        '0xbD98B30276FEb0d32C7d6d52CB17b9Ccee355695'
-      )
-      .then(console.log);
+    web3.eth.sign(web3.utils.keccak256(username), account).then(console.log);
   };
 
   return (
