@@ -8,7 +8,7 @@ const Profile = ({ account, web3 }) => {
 
     web3.eth
       .sign(
-        web3.utils.keccak256('test'),
+        web3.utils.keccak256(username),
         '0xbD98B30276FEb0d32C7d6d52CB17b9Ccee355695'
       )
       .then(console.log);
