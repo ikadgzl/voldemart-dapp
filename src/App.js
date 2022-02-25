@@ -35,7 +35,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (!window.ethereum.isMetaMask) {
+    if (!window.ethereum) {
       setError('Please install MetaMask wallet to continue...');
       return;
     }
